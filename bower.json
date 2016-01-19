@@ -1,0 +1,7 @@
+{
+    "name": "Personal Site",
+    "dependencies": {
+        "fullpage.js": "~2.7.6",
+        "velocity": "~1.2.3"
+    }
+}

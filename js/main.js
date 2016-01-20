@@ -6,6 +6,7 @@ $(document).ready(function () {
 
             //after leaving section 2
             if (index === 1 && nextIndex === 2) {
+                skillsAnimate();
                 $(".main-nav-heading").velocity("transition.flipYIn").text("sKILLS");
             } else if (index === 1 && nextIndex === 3) {
                 $(".main-nav-heading").velocity("transition.flipYIn").text("cONTACT");
@@ -16,6 +17,7 @@ $(document).ready(function () {
             } else if (index === 3 && nextIndex === 1) {
                 $(".main-nav-heading").velocity("transition.flipYIn").text("jKEENER");
             } else if (index === 3 && nextIndex === 2) {
+                skillsAnimate();
                 $(".main-nav-heading").velocity("transition.flipYIn").text("sKILLS");
             }
         }
@@ -38,8 +40,22 @@ $(document).ready(function () {
             delay: 300
         });
     });
-    
-    $(".squiggle-triangles").velocity({opacity: 1}, {delay: 4000});
+
+    function skillsAnimate() {
+
+
+        $('.squiggle').velocity({
+            'stroke-dashoffset': 0
+        }, {
+            duration: 4000,
+            delay: 0
+        });
+        $(".squiggle-triangles").velocity({
+            opacity: 1
+        }, {
+            delay: 4000
+        });
+    }
 });
 
 var path = document.querySelector('.squiggle');

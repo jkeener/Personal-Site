@@ -116,28 +116,22 @@ a:visited {
 
 .home-svg {
     position: fixed;
-    bottom: 0;
     width: 100%;
-    height: auto;
+    bottom: 0;
     z-index: -1;
 }
 
 
 /* Skills styles */
 
-.skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.skills-text {
+
+.skills {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 75vw;
     padding-top: 10em
 }
 
@@ -145,17 +139,6 @@ a:visited {
     font-weight: 400;
     font-size: 3vh;
     flex-basis: 100%;
-}
-
-.skills-list {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    font-size: 2vh;
-    font-family: 'RobotoSlab', serif;
-    margin-bottom: 7em;
 }
 
 .skills h3 {
@@ -182,15 +165,14 @@ a:visited {
 
 .skills-svg {
     position: fixed;
-    top: 99.9vh;
     width: 100%;
-    height: auto;
+    top:100%;
     z-index: -1
 }
 .skills-list {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
+    max-width: 400px;;
+    width: 60%;
+    height: 100%;
 }
 .skills-reg {
     margin-bottom: 1em;
@@ -203,23 +185,17 @@ a:visited {
 .squiggle {
     stroke-dasharray: 3042.74;
     stroke-dashoffset: 3042.74;
-    animation: dash 4s linear forwards;
 }
 
 .squiggle-triangles {
     opacity: 0;
 }
 
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
 
 /* Contact styles */
 
 .contact {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,10 +203,9 @@ a:visited {
 }
 
 .contact-svg {
-    position: fixed;
-    bottom: -180vh;
+    position: absolute;
     width: 100%;
-    height: auto;
+    bottom: 40%;
     z-index: -1;
 }
 
@@ -367,6 +342,12 @@ a:visited {
         display: flex;
         margin-bottom: 1em;
     }
+    .contact-svg {
+    position: absolute;
+    width: 100%;
+    bottom: 30%;
+    z-index: -1;
+}
     .button {
         font-weight: 600;
         font-size: 2em;

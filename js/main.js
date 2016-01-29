@@ -37,7 +37,7 @@ $(document).ready(function () {
         });
         $(".small-nav-heading").velocity("transition.flipYIn", {
             duration: 200,
-            delay: 300
+            delay: 500
         });
     });
 
@@ -57,7 +57,3 @@ $(document).ready(function () {
         });
     }
 });
-
-var path = document.querySelector('.squiggle');
-var length = path.getTotalLength();
-console.log(length);

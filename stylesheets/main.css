@@ -592,7 +592,7 @@ a:visited {
         flex-wrap: wrap;
     }
     .skills-list-landscape {
-        width: 100%;
+        width: 450px;
         height: 100%;
         padding: 1em;
         display: -webkit-box;

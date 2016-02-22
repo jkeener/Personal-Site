@@ -40,16 +40,17 @@ $(document).ready(function () {
                     delay: 500
                 });
             });
-
-            function skillsAnimate() {
-                $(function () {
-                    $(".squiggle").each(function () {
+            
+            $(".squiggle").each(function () {
                         var length = this.getTotalLength();
                         $(this).css({
                             "stroke-dasharray": length,
                             "stroke-dashoffset": length
                         });
                     });
+    
+            function skillsAnimate() {
+                $(function () {
                     $(".squiggle").velocity({
                         'stroke-dashoffset': 0
                     }, {

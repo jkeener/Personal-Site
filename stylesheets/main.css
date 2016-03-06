@@ -82,6 +82,7 @@ a:visited {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+    cursor:default;
 }
 
 .main-nav-heading {

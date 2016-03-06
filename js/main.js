@@ -1,10 +1,11 @@
 $(document).ready(function () {
+    /// init fullpage ///
             $('#fullpage').fullpage({
                 anchors: ['home', 'skills', 'contact'],
                 onLeave: function (index, nextIndex, direction) {
                     var leavingSection = $(this);
 
-                    //after leaving section 2
+                    /// this is controlling the animations for the top nav on page switch ///
                     if (index === 1 && nextIndex === 2) {
                         skillsAnimate();
                         $(".main-nav-heading").velocity("transition.flipYIn").text("sKILLS");
@@ -22,6 +23,8 @@ $(document).ready(function () {
                     }
                 }
             });
+    
+            /// animations for the page names ///
             $(".small-nav-heading").click(function () {
                 $(".small-nav-heading").velocity("transition.flipYOut", {
                     duration: 300
@@ -41,6 +44,7 @@ $(document).ready(function () {
                 });
             });
             
+            /// set the css of the dasharray and dashoffest of lines on the skills page (since both images have diffrent line lengths) ///
             $(".squiggle").each(function () {
                         var length = this.getTotalLength();
                         $(this).css({
@@ -49,6 +53,7 @@ $(document).ready(function () {
                         });
                     });
     
+            /// line animation function ///
             function skillsAnimate() {
                 $(function () {
                     $(".squiggle").velocity({
@@ -58,6 +63,7 @@ $(document).ready(function () {
                         delay: 300,
                         easing: "easeOutSine",
                         complete: function () {
+                            /// fade the triangles in after the line animation is done ///
                             console.log("done");
                             $(".squiggle-triangles").velocity({
                                 'opacity': '1'

@@ -272,7 +272,7 @@
     .contact-svg {
         position: absolute;
         width: 100%;
-        bottom: 30%;
+        bottom: 0;
         z-index: -1;
     }
     
@@ -314,11 +314,18 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     
     .icons i {
         padding: 1em;
-        font-size: 3em
+        font-size: 3em;
     }
     
     #twitter-icon {
@@ -335,6 +342,10 @@
         -webkit-transition: color .25s ease-in-out;
         transition: color .25s ease-in-out;
     }
+    #github-icon {
+        -webkit-transition: color .25s ease-in-out;
+        transition: color .25s ease-in-out;
+    }
     
     #twitter-icon:hover {
         color: #ffb400;
@@ -347,6 +358,10 @@
     
     #instagram-icon:hover {
         color: #2994b2;
+    }
+
+    #github-icon:hover {
+        color: #ffb400;
     }
     /* Media */
     
@@ -420,6 +435,18 @@
             padding: .0 .1em 0 .1em;
             box-shadow: 1px 1px 0 0 black;
             margin: 0;
+        }
+        .skills-list {
+        width: 30vh;
+    }
+        .skills h3 {
+            margin:0;
+        }
+        .button {
+            margin-top: 1em;
+        }
+        .icons i {
+            padding: .5em;
         }
     }
     
